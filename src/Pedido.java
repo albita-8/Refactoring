@@ -8,23 +8,38 @@ public class Pedido {
     private Cliente cliente;
     private List<Producto> productos;
 
+    /**
+     * @param cliente
+     */
     public Pedido(Cliente cliente) {
         this.cliente = cliente;
         this.productos = new ArrayList<>();
     }
 
+    /**
+     * @param producto
+     */
     public void agregarProducto(Producto producto) {
         productos.add(producto);
     }
 
+    /**
+     * @return
+     */
     public Cliente getCliente() {
         return cliente;
     }
 
+    /**
+     * @return
+     */
     public List<Producto> getProductos() {
         return productos;
     }
 
+    /**
+     * @return
+     */
     public double calcularTotalNeto() {
         double total = 0;
 

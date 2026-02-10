@@ -35,6 +35,9 @@ public class App {
         procesarPedido(pedido2);
     }
 
+    /**
+     * @param pedido
+     */
     public static void procesarPedido(Pedido pedido) {
 
         Cliente cliente = pedido.getCliente();
@@ -67,6 +70,10 @@ public class App {
         guardarFacturaEnArchivo(cliente, totalConIva);
     }
 
+    /**
+     * @param cliente
+     * @param totalConIva
+     */
     public static void guardarFacturaEnArchivo(Cliente cliente, double totalConIva) {
 
         String nombreArchivo = String.format("pedido_%s.txt", cliente.getId());
